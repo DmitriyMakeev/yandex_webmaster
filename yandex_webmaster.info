@@ -1,0 +1,10 @@
+name = Yandex.Webmaster
+description = Adds the Yandex.Webmaster service to your website.
+core = 7.x
+
+configure = admin/config/services/yandex_webmaster
+
+files[] = yandex_webmaster.install
+files[] = yandex_webmaster.module
+files[] = yandex_webmaster.admin.inc
+files[] = yandex_webmaster.theme.inc

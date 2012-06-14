@@ -1,0 +1,156 @@
+/* Yandex.Webmaster module styles */
+.yandex_webmaster_external_link {
+  background: url("images/link.png") no-repeat center 0;
+  display: inline-block;
+  height: 14px;
+  text-indent: -9999px;
+  width: 20px;
+}
+.yandex_webmaster_chart, .yandex_webmaster_remove {
+  display: inline-block;
+  height: 24px;
+  outline: none;
+  text-indent: -9999px;
+  width: 36px;
+}
+.yandex_webmaster_chart {
+  background: url("images/chart.png") no-repeat 0 center;
+  padding-right: 10px;
+}
+.yandex_webmaster_remove {
+  background: url("images/remove.png") no-repeat 0 center;
+}
+.yandex_webmaster_host_state {
+  display: inline-block;
+  padding-left: 30px;
+}
+.yandex_webmaster_host_state.VERIFIED {
+  background: url("images/verified.png") no-repeat 0 center;
+}
+.yandex_webmaster_host_state.VIRUSED {
+  background: url("images/danger.png") no-repeat 0 center!important;
+}
+.yandex_webmaster_host_state.NEVER_VERIFIED {
+  background: url("images/never.png") no-repeat 0 center;
+}
+.yandex_webmaster_host_state.VERIFICATION_FAILED {
+  background: url("images/error.png") no-repeat 0 center;
+}
+.yandex_webmaster_host_state.IN_PROGRESS,
+.yandex_webmaster_host_state.WAITING {
+  background: url("images/wait.png") no-repeat 0 center;
+}
+
+.yandex_webmaster_hostname {
+  display: inline-block;
+  line-height: 1.2em;
+}
+.yandex_webmaster_hostname span {
+  font-size: 80%;
+  opacity: 0.7;
+}
+
+#yandex-webmaster-config-form .edit-manual-verification-message {
+  color: #900;
+  font-size: 130%;
+}
+
+#yandex-webmaster-config-form .edit-add-new-host-message {
+  color: #090;
+  font-size: 130%;
+}
+
+/* Block styles */
+.yandex-webmaster-stats .virused-site {
+  color: #900;
+  font-size: 130%;
+}
+.yandex-webmaster-stats .branding, #edit-branding .branding {
+  background: url("images/logo.png") no-repeat right top;
+  font-size: 80%;
+  padding-top: 24px;
+  text-align: right;
+}
+.yandex-webmaster-stats .branding-ru, #edit-branding .branding-ru {
+  background: url("images/logo-ru.png") no-repeat right top;
+}
+#yandex-webmaster-config-form #edit-branding {
+  position: absolute;
+  right: 0;
+}
+
+/* Table sort */
+table.sortable th {
+  background-image: url("images/sort.png")!important;
+  background-position: right center!important;
+  background-repeat: no-repeat!important;
+  cursor: pointer;
+  padding-right: 16px!important;
+}
+table.sortable th.sorted {
+  background-image: url("images/sort-active.png")!important;
+  font-weight: bold;
+}
+
+/* Modal window sttyle */
+#yandex-webmaster-modal {
+  background-color: #FFF;
+  height: 514px;
+  margin-left:-220px;
+  margin-top: -300px;
+  padding: 4px 20px;
+  width: 500px;
+}
+#yandex-webmaster-modal ol {
+  font-size: 90%;
+}
+.modal-overlay {
+  -moz-opacity: 0.60;
+  background: #000;
+  bottom: 0;
+  filter: alpha(opacity=60);
+  height: 100%;
+  left: 0;
+  margin: 0;
+  opacity: 0.60;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+* html .modal-overlay {
+  height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+  position: absolute;
+}
+.modal-window {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  z-index: 1001;
+}
+* html .modal-window {
+  position: absolute;
+}
+.close-window {
+  -moz-opacity: 0.5;
+  background: transparent url("images/error.png") no-repeat 0 0;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  height: 32px;
+  opacity: 0.5;
+  overflow: hidden;
+  position: absolute;
+  right: 8px;
+  text-indent: -99999px;
+  top: 8px;
+  width: 32px;
+}
+.close-window:hover {
+  -moz-opacity: 0.99;
+  filter: alpha(opacity=99);
+  opacity: 0.99;
+}

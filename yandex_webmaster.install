@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Install and uninstall functions for the Yandex.Webmaster module
+ */
+
+/**
+ * Implements hook_install().
+ */
+function yandex_webmaster_install() {
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function yandex_webmaster_uninstall() {
+  variable_del('yandex_webmaster_basic_host_id');
+  variable_del('yandex_webmaster_block_enabled');
+  variable_del('yandex_webmaster_block_settings');
+  variable_del('yandex_webmaster_code');
+  variable_del('yandex_webmaster_full_list');
+  variable_del('yandex_webmaster_token');
+  variable_del('yandex_webmaster_token_expiration');
+  variable_del('yandex_webmaster_uid');
+  variable_del('yandex_webmaster_uin');
+  variable_del('yandex_webmaster_use_metatag');
+  variable_del('yandex_webmaster_verification_type');
+  cache_clear_all('variables', 'cache');
+}
