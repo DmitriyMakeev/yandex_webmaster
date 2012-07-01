@@ -12,9 +12,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Yandex.Webmaster\n"
-"POT-Creation-Date: 2012-06-15 00:54+0400\n"
-"PO-Revision-Date: 2012-06-15 00:58+0400\n"
-"Last-Translator: Dmitriy Makeev <dmitriy@volganet.org>\n"
+"POT-Creation-Date: 2012-07-01 22:50+0400\n"
+"PO-Revision-Date: 2012-07-01 22:51+0400\n"
+"Last-Translator: Dmitriy Makeev\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,306 +22,318 @@ msgstr ""
 "X-Poedit-Language: Russian\n"
 "X-Poedit-Country: RUSSIAN FEDERATION\n"
 
-#: yandex_webmaster.admin.inc:21
-msgid "Yandex.Webmaster top queries"
-msgstr "Популярные запросы Яндекс.Вебмастер"
+#: yandex_webmaster.admin.inc:26
+msgid "Read user agreements"
+msgstr "Пользовательское соглашение"
 
-#: yandex_webmaster.admin.inc:28
-msgid "An error occured while getting clicks statistics. @error"
-msgstr "Произошла ошибка при получении данных о кликах. @error"
-
-#: yandex_webmaster.admin.inc:36;144;211;266;331
-#: yandex_webmaster.module:356
+#: yandex_webmaster.admin.inc:31
+#: yandex_webmaster.module:337
 msgid "Data provided by !link service."
 msgstr "Данные предоставлены сервисом !link."
 
-#: yandex_webmaster.admin.inc:36;144;211;266;331
-#: yandex_webmaster.module:356;27;69
+#: yandex_webmaster.admin.inc:31;34
+#: yandex_webmaster.module:337;27;69
 #: yandex_webmaster.info:0
 msgid "Yandex.Webmaster"
 msgstr "Яндекс.Вебмастер"
 
-#: yandex_webmaster.admin.inc:43;59
+#: yandex_webmaster.admin.inc:48
+msgid "Yandex.Webmaster top queries"
+msgstr "Популярные запросы Яндекс.Вебмастер"
+
+#: yandex_webmaster.admin.inc:55
+msgid "An error occured while getting clicks statistics. @error"
+msgstr "Произошла ошибка при получении данных о кликах. @error"
+
+#: yandex_webmaster.admin.inc:64
 msgid "Summary click count for last seven days"
 msgstr "Общее количество кликов за последние семь дней"
 
-#: yandex_webmaster.admin.inc:45;92
+#: yandex_webmaster.admin.inc:66
 msgid "Summary shows count for last seven days"
 msgstr "Общее количество показов за последние семь дней"
 
-#: yandex_webmaster.admin.inc:53
+#: yandex_webmaster.admin.inc:74
 msgid "Percentage of shows count to the number of clicks"
 msgstr "Соотношение числа показов к числу кликов"
 
-#: yandex_webmaster.admin.inc:61
-msgid "Summary procent of popular query clicks"
-msgstr "Общий процент кликов по популярным запросам"
+#: yandex_webmaster.admin.inc:80
+msgid "Click count for last seven days"
+msgstr "Клики за последние семь дней"
 
-#: yandex_webmaster.admin.inc:66
+#: yandex_webmaster.admin.inc:82
+msgid "Procent of popular query clicks"
+msgstr "Процент кликов по популярным запросам"
+
+#: yandex_webmaster.admin.inc:87
 msgid "Top clicks for last seven days"
 msgstr "Популярные клики за последние семь дней"
 
-#: yandex_webmaster.admin.inc:72;105
+#: yandex_webmaster.admin.inc:106;144
 msgid "Query"
 msgstr "Запрос"
 
-#: yandex_webmaster.admin.inc:73
+#: yandex_webmaster.admin.inc:107
 msgid "Click count"
 msgstr "Количество кликов"
 
-#: yandex_webmaster.admin.inc:74;107
+#: yandex_webmaster.admin.inc:108;146
 msgid "Position"
 msgstr "Позиция"
 
-#: yandex_webmaster.admin.inc:75;108
+#: yandex_webmaster.admin.inc:109;147
 msgid "User query"
 msgstr "Пользовательский запрос"
 
-#: yandex_webmaster.admin.inc:94
-msgid "Summary procent of popular query shows"
-msgstr "Общий процент показов по популярным запросам"
+#: yandex_webmaster.admin.inc:118
+msgid "Shows count for last seven days"
+msgstr "Показы за последние семь дней"
 
-#: yandex_webmaster.admin.inc:99
+#: yandex_webmaster.admin.inc:120
+msgid "Procent of popular query shows"
+msgstr "Процент показов по популярным запросам"
+
+#: yandex_webmaster.admin.inc:125
 msgid "Top shows for last seven days"
 msgstr "Популярные показы за последние семь дней"
 
-#: yandex_webmaster.admin.inc:106
+#: yandex_webmaster.admin.inc:145
 msgid "Shows count"
 msgstr "Показы"
 
-#: yandex_webmaster.admin.inc:130
+#: yandex_webmaster.admin.inc:161
 msgid "Yandex.Webmaster last indexed pages"
 msgstr "Последние проиндексированные страницы Яндекс.Вебмастер"
 
-#: yandex_webmaster.admin.inc:136
+#: yandex_webmaster.admin.inc:167
 msgid "An error occured while getting last indexed pages statistics. @error"
 msgstr "Произошла ошибка при получении списка последних проиндексированных страницах. @error"
 
-#: yandex_webmaster.admin.inc:150
+#: yandex_webmaster.admin.inc:175
 msgid "Summary count of indexed pages"
 msgstr "Общее количество проиндексированных страниц"
 
-#: yandex_webmaster.admin.inc:153;171
+#: yandex_webmaster.admin.inc:178;203
 msgid "Indexed pages for last seven days"
 msgstr "Проиндексированные страницы за последние семь дней"
 
-#: yandex_webmaster.admin.inc:158
+#: yandex_webmaster.admin.inc:183
 msgid "View all indexed pages"
 msgstr "Просмотр всех проиндексированных страниц"
 
-#: yandex_webmaster.admin.inc:161;283;440
-#: yandex_webmaster.theme.inc:40;105
+#: yandex_webmaster.admin.inc:186;254;310;447;513
 msgid "Open in new window"
 msgstr "Открыть в новом окне"
 
-#: yandex_webmaster.admin.inc:176;298
+#: yandex_webmaster.admin.inc:208;332
 msgid "Address"
 msgstr "Адрес"
 
-#: yandex_webmaster.admin.inc:196
+#: yandex_webmaster.admin.inc:224
 msgid "Yandex.Webmaster excluded pages"
 msgstr "Исключённые страницы Яндекс.Вебмастер"
 
-#: yandex_webmaster.admin.inc:203
+#: yandex_webmaster.admin.inc:231
 msgid "An error occured while getting excluded pages statistics. @error"
 msgstr "Произошла ошибка при получении списка исключённых страниц. @error"
 
-#: yandex_webmaster.admin.inc:216
+#: yandex_webmaster.admin.inc:238
 msgid "Summary count of excluded pages"
 msgstr "Общее количество исключённых страниц"
 
-#: yandex_webmaster.admin.inc:227
-msgid "Severity"
-msgstr "Важность"
+#: yandex_webmaster.admin.inc:251
+msgid "View"
+msgstr "Просмотр"
 
-#: yandex_webmaster.admin.inc:228
-msgid "Error type"
-msgstr "Тип ошибки"
-
-#: yandex_webmaster.admin.inc:229
-msgid "Count"
-msgstr "Количество"
-
-#: yandex_webmaster.admin.inc:230;465
-msgid "Actions"
-msgstr "Действия"
-
-#: yandex_webmaster.admin.inc:252
-msgid "Yandex.Webmaster external links"
-msgstr "Внешние ссылки Яндекс.Вебмастер"
-
-#: yandex_webmaster.admin.inc:258
-msgid "An error occured while getting external links statistics. @error"
-msgstr "Произошла ошибка при получении списка внешних ссылок. @error"
-
-#: yandex_webmaster.admin.inc:272
-msgid "Summary count of external links"
-msgstr "Общее количество внешних ссылок"
-
-#: yandex_webmaster.admin.inc:275;293
+#: yandex_webmaster.admin.inc:262;302;327
 msgid "External links for last seven days"
 msgstr "Внешние ссылки за последние семь дней"
 
-#: yandex_webmaster.admin.inc:280
+#: yandex_webmaster.admin.inc:266
+msgid "Severity"
+msgstr "Важность"
+
+#: yandex_webmaster.admin.inc:267
+msgid "Error type"
+msgstr "Тип ошибки"
+
+#: yandex_webmaster.admin.inc:268
+msgid "Count"
+msgstr "Количество"
+
+#: yandex_webmaster.admin.inc:269;464
+msgid "Actions"
+msgstr "Действия"
+
+#: yandex_webmaster.admin.inc:285
+msgid "Yandex.Webmaster external links"
+msgstr "Внешние ссылки Яндекс.Вебмастер"
+
+#: yandex_webmaster.admin.inc:291
+msgid "An error occured while getting external links statistics. @error"
+msgstr "Произошла ошибка при получении списка внешних ссылок. @error"
+
+#: yandex_webmaster.admin.inc:299
+msgid "Summary count of external links"
+msgstr "Общее количество внешних ссылок"
+
+#: yandex_webmaster.admin.inc:307
 msgid "View all external links"
 msgstr "Просмотр всех внешних ссылок"
 
-#: yandex_webmaster.admin.inc:333
-msgid "Read user agreements"
-msgstr "Пользовательское соглашение"
-
-#: yandex_webmaster.admin.inc:340
-msgid "Security code was already set. If you need to get new code, !link."
-msgstr "Код подтверждения уже был установлен. Если вы хотите обновить его, !link."
-
-#: yandex_webmaster.admin.inc:340;412;437
-msgid "click here"
-msgstr "нажмите здесь"
-
-#: yandex_webmaster.admin.inc:344
-msgid "Yandex.Webmaster module requires security code to work. !link, to get code."
-msgstr "Для работы модуля Яндекс.Вебмастер требуется установить код подтверждения. !link, чтобы получить код."
-
-#: yandex_webmaster.admin.inc:344
-msgid "Click here"
-msgstr "Нажмите здесь"
-
-#: yandex_webmaster.admin.inc:358
+#: yandex_webmaster.admin.inc:368
 msgid "Security code"
 msgstr "Код подтверждения"
 
-#: yandex_webmaster.admin.inc:368
+#: yandex_webmaster.admin.inc:380
+msgid "Refresh"
+msgstr "Обновить"
+
+#: yandex_webmaster.admin.inc:380
+msgid "Get code"
+msgstr "Получить код"
+
+#: yandex_webmaster.admin.inc:392
 msgid "Enable statistics block"
 msgstr "Включить блок статистики"
 
-#: yandex_webmaster.admin.inc:375
+#: yandex_webmaster.admin.inc:399
 msgid "Display full host list"
 msgstr "Отображать полный список сайтов"
 
-#: yandex_webmaster.admin.inc:382
-msgid "Use meta-tag on the front page for verification"
-msgstr "Использовать для проверки прав мета-тег на главной странице сайта"
-
-#: yandex_webmaster.admin.inc:390
+#: yandex_webmaster.admin.inc:406
 msgid "Select Yandex.Webmaster domain name"
 msgstr "Выберите домен для сервиса Яндекс.Вебмастер"
 
-#: yandex_webmaster.admin.inc:392;459
+#: yandex_webmaster.admin.inc:408
 msgid "Default"
 msgstr "По умолчанию"
 
-#: yandex_webmaster.admin.inc:393
+#: yandex_webmaster.admin.inc:409
 msgid "Russian"
 msgstr "Русский"
 
-#: yandex_webmaster.admin.inc:412
-msgid "Current site (@site) is not in your host list. To add your site to Yandex.Webmaster service, !link."
-msgstr "Текущий сайт (@site) отсутствует в вашем списке. Чтобы добавить сайт в сервис Яндекс.Вебмастер, !link."
+#: yandex_webmaster.admin.inc:410
+msgid "Ukrainian"
+msgstr "Украинский"
 
-#: yandex_webmaster.admin.inc:422;622
+#: yandex_webmaster.admin.inc:429;692
 msgid "An error occurred while getting current host UIN from Yandex.Webmaster service."
 msgstr "Произошла ошибка при получении идентификатора текущего хоста от сервиса Яндекс.Вебмастер."
 
-#: yandex_webmaster.admin.inc:429;636
+#: yandex_webmaster.admin.inc:436;706
 msgid "Current site (@site) can't be automatic verified. You will need to create empty text file \"@filename\" in site root directory."
 msgstr "Текущий сайт (@site) не может быть проверен автоматически. Вам нужно создать пустой текстовый файл \"@filename\" в корневой директории сайта."
 
-#: yandex_webmaster.admin.inc:437
+#: yandex_webmaster.admin.inc:444
 msgid "Unfortunately, Yandex.Webmaster service may not process meta-tag verification for the first time. To run check procedure once again, !link."
 msgstr "К сожалению, сервис Яндекс.Вебмастер может неверно обработать проверку сайта по мета-тегу с первого раза. Чтобы запустить проверку снова, !link."
 
-#: yandex_webmaster.admin.inc:454
-msgid "Host list"
-msgstr "Список сайтов"
+#: yandex_webmaster.admin.inc:444
+msgid "click here"
+msgstr "нажмите здесь"
 
-#: yandex_webmaster.admin.inc:460
-#: yandex_webmaster.module:313
+#: yandex_webmaster.admin.inc:459
+#: yandex_webmaster.module:294
 msgid "Host name"
 msgstr "Имя сайта"
 
-#: yandex_webmaster.admin.inc:461
-#: yandex_webmaster.module:331
+#: yandex_webmaster.admin.inc:460
+#: yandex_webmaster.module:312
 msgid "TCY"
 msgstr "ТИЦ"
 
-#: yandex_webmaster.admin.inc:462
-#: yandex_webmaster.module:335
+#: yandex_webmaster.admin.inc:461
+#: yandex_webmaster.module:316
 msgid "URL count"
 msgstr "Количество страниц"
 
-#: yandex_webmaster.admin.inc:463
-#: yandex_webmaster.module:339
+#: yandex_webmaster.admin.inc:462
+#: yandex_webmaster.module:320
 msgid "Index count"
 msgstr "Страницы в поиске"
 
-#: yandex_webmaster.admin.inc:464
-#: yandex_webmaster.module:327
+#: yandex_webmaster.admin.inc:463
+#: yandex_webmaster.module:308
 msgid "Last access"
 msgstr "Последний доступ"
 
-#: yandex_webmaster.admin.inc:474;477
+#: yandex_webmaster.admin.inc:475;478
 msgid "Open statistics"
 msgstr "Открыть статистику"
 
-#: yandex_webmaster.admin.inc:483;486
+#: yandex_webmaster.admin.inc:484;487
 msgid "Remove site"
 msgstr "Удалить сайт"
 
-#: yandex_webmaster.admin.inc:507
-msgid "Set as default"
-msgstr "Установить по умолчанию"
+#: yandex_webmaster.admin.inc:526
+#: yandex_webmaster.module:302
+msgid "@time ago"
+msgstr "@time назад"
 
-#: yandex_webmaster.admin.inc:544
+#: yandex_webmaster.admin.inc:536
+msgid "Not in your host list. Need to be added."
+msgstr "Отсутствует в вашем списке. Необходимо добавить."
+
+#: yandex_webmaster.admin.inc:545;634
+msgid "Add site"
+msgstr "Добавить сайт"
+
+#: yandex_webmaster.admin.inc:562
+msgid "Not one host was previously added."
+msgstr "Ни один сайт не был добавлен ранее."
+
+#: yandex_webmaster.admin.inc:587
 msgid "Security code was successfully checked."
 msgstr "Код подтверждения был успешно обновлен."
 
-#: yandex_webmaster.admin.inc:558
+#: yandex_webmaster.admin.inc:608
 msgid "Access request return error: @error. Try to get a new security code."
 msgstr "Запрос доступа завершился ошибкой: @error. Попробуйте обновить код подтверждения."
 
-#: yandex_webmaster.admin.inc:570;688
+#: yandex_webmaster.admin.inc:620;757
 msgid "Before adding new site to Yandex.Webmaster, you need to enter security code."
 msgstr "Перед добавлением нового сайта в сервис Яндекс.Вебмастер, требуется ввести код подтверждения."
 
-#: yandex_webmaster.admin.inc:588
+#: yandex_webmaster.admin.inc:626
+msgid "Use meta-tag on the front page for verification"
+msgstr "Использовать для проверки прав мета-тег на главной странице сайта"
+
+#: yandex_webmaster.admin.inc:658
 msgid "Site was sucessfully added to Yandex.Webmaster."
 msgstr "Сайт был успешно добавлен в сервис Яндекс.Вебмастер."
 
-#: yandex_webmaster.admin.inc:594
+#: yandex_webmaster.admin.inc:664
 msgid "An error occurred while adding new site to Yandex.Webmaster. @error"
 msgstr "Произошла ошибка при добавлении нового сайта в сервис Яндекс.Вебмастер. @error"
 
-#: yandex_webmaster.admin.inc:601;614
+#: yandex_webmaster.admin.inc:671;684
 msgid "An error occurred while getting current host ID from Yandex.Webmaster service."
 msgstr "Произошла ошибка при получение идентификатора текущего хоста от сервиса Яндекс.Вебмастер."
 
-#: yandex_webmaster.admin.inc:651
+#: yandex_webmaster.admin.inc:721
 msgid "An error occurred while sending verification type to Yandex.Webmaster service."
 msgstr "Произошла ошибка при отправке типа подтверждения прав на управление сайтом в Яндекс.Вебмастер."
 
-#: yandex_webmaster.admin.inc:666
+#: yandex_webmaster.admin.inc:735
 msgid "Are you sure want to remove current site from Yandex.Webmaster service?"
 msgstr "Вы действительно хотите удалить текущий сайт из сервиса Яндекс.Вебмастер?"
 
-#: yandex_webmaster.admin.inc:671;684
+#: yandex_webmaster.admin.inc:740;753
 msgid "Remove"
 msgstr "Удалить"
 
-#: yandex_webmaster.admin.inc:675
+#: yandex_webmaster.admin.inc:744
 msgid "Cancel"
 msgstr "Отмена"
 
-#: yandex_webmaster.admin.inc:699;713
+#: yandex_webmaster.admin.inc:768;782
 msgid "An error occurred while sending delete request to Yandex.Webmaster service."
 msgstr "Произошла ошибка при отправке запроса на удаления в Яндекс.Вебмастер."
 
-#: yandex_webmaster.admin.inc:710
+#: yandex_webmaster.admin.inc:779
 msgid "Site was sucessfully removed from Yandex.Webmaster service."
 msgstr "Сайт был успешно удалён из сервиса Яндекс.Вебмастер."
-
-#: yandex_webmaster.theme.inc:102
-msgid "View"
-msgstr "Просмотр"
 
 #: yandex_webmaster.module:101
 msgid "Administer Yandex.Webmaster."
@@ -339,443 +351,443 @@ msgstr "Просмотр отчетов Яндекс.Вебмастер."
 msgid "Allows a user to view Yandex.Webmaster service reports."
 msgstr "Разрешить пользователю просматривать отчеты Яндекс.Вебмастер."
 
-#: yandex_webmaster.module:208
+#: yandex_webmaster.module:121
+msgid "Danger! Site \"@site\" is virused!"
+msgstr "Внимание! Сайт \"@site\" заражен вирусами!"
+
+#: yandex_webmaster.module:189
 msgid "Yandex.Webmaster settings"
 msgstr "Настройки Яндекс.Вебмастер"
 
-#: yandex_webmaster.module:214
+#: yandex_webmaster.module:195
 msgid "Display Yandex branding in the block."
 msgstr "Показывать ссылку на сервис Яндекс.Вебмастер."
 
-#: yandex_webmaster.module:219
+#: yandex_webmaster.module:200
 msgid "Use interval to display last index date."
 msgstr "Использовать временной интервал для отображения даты последней индексации."
 
-#: yandex_webmaster.module:225
+#: yandex_webmaster.module:206
 msgid "Display hostname."
 msgstr "Показывать имя сайта."
 
-#: yandex_webmaster.module:230
+#: yandex_webmaster.module:211
 msgid "Display last access date."
 msgstr "Показывать дату последней индексации."
 
-#: yandex_webmaster.module:235
+#: yandex_webmaster.module:216
 msgid "Display TCY value."
 msgstr "Показывать значение ТИЦ."
 
-#: yandex_webmaster.module:240
+#: yandex_webmaster.module:221
 msgid "Display URL count."
 msgstr "Показывать количество страниц."
 
-#: yandex_webmaster.module:245
+#: yandex_webmaster.module:226
 msgid "Display index count."
 msgstr "Показывать количество страницы в поиске."
 
-#: yandex_webmaster.module:250
+#: yandex_webmaster.module:231
 msgid "Display url errors count."
 msgstr "Отображать количество исключённых страниц."
 
-#: yandex_webmaster.module:255
+#: yandex_webmaster.module:236
 msgid "Display links count."
 msgstr "Показывать количество внешних ссылок."
 
-#: yandex_webmaster.module:260
+#: yandex_webmaster.module:241
 msgid "Display internal links count."
 msgstr "Показывать количество внутренних ссылок."
 
-#: yandex_webmaster.module:300
+#: yandex_webmaster.module:281
 msgid "An error has occurred."
 msgstr "Произошла ошибка."
 
-#: yandex_webmaster.module:309
+#: yandex_webmaster.module:290
 msgid "Danger! Site is virused!"
 msgstr "Внимание! Сайт заражен вирусами!"
 
-#: yandex_webmaster.module:321
-msgid "@time ago"
-msgstr "@time назад"
-
-#: yandex_webmaster.module:343
+#: yandex_webmaster.module:324
 msgid "URL errors"
 msgstr "Ошибки страниц"
 
-#: yandex_webmaster.module:347
+#: yandex_webmaster.module:328
 msgid "Links count"
 msgstr "Количество ссылок"
 
-#: yandex_webmaster.module:351
+#: yandex_webmaster.module:332
 msgid "Internal links"
 msgstr "Внутренние ссылки"
 
-#: yandex_webmaster.module:382
+#: yandex_webmaster.module:363
 msgid "Verification in progress."
 msgstr "Идёт проверка прав на управление сайтом."
 
-#: yandex_webmaster.module:384
+#: yandex_webmaster.module:365
 msgid "The site was never verified."
 msgstr "Права на управление сайтом никогда не подтверждались."
 
-#: yandex_webmaster.module:386
+#: yandex_webmaster.module:367
 msgid "Site verification has failed."
 msgstr "Ошибка при попытке подтверждения прав."
 
-#: yandex_webmaster.module:388
+#: yandex_webmaster.module:369
 msgid "Verified."
 msgstr "Права подтверждены."
 
-#: yandex_webmaster.module:391
+#: yandex_webmaster.module:372
 msgid "The site is in queue for verification."
 msgstr "Ожидание в очереди на подтверждение."
 
-#: yandex_webmaster.module:394
+#: yandex_webmaster.module:375
 msgid "The site expects the index."
 msgstr "Сайт ожидает индексирования."
 
-#: yandex_webmaster.module:397
+#: yandex_webmaster.module:378
 msgid "The site is in queue."
 msgstr "Сайт находится в очереди."
 
-#: yandex_webmaster.module:401
+#: yandex_webmaster.module:382
 msgid "Site was indexed."
 msgstr "Сайт проиндексирован."
 
-#: yandex_webmaster.module:403
+#: yandex_webmaster.module:384
 msgid "Site was not indexed."
 msgstr "Сайт не проиндексирован."
 
-#: yandex_webmaster.module:406
+#: yandex_webmaster.module:387
 msgid "Automatic verification."
 msgstr "Автоматическая проверка."
 
-#: yandex_webmaster.module:408
+#: yandex_webmaster.module:389
 msgid "Adding TXT parameter in DNS-record of the site."
 msgstr "Добавление записи типа TXT в DNS-запись сайта. "
 
-#: yandex_webmaster.module:410
+#: yandex_webmaster.module:391
 msgid "HTML file in the site root directory."
 msgstr "Размещение HTML-файла в корневом каталоге сайта."
 
-#: yandex_webmaster.module:412
+#: yandex_webmaster.module:393
 msgid "Manual verification."
 msgstr "Ручное подтверждение прав."
 
-#: yandex_webmaster.module:414
+#: yandex_webmaster.module:395
 msgid "Meta-tag in header of the front page."
 msgstr "Добавление мета-тега в заголовок главной страницы сайта."
 
-#: yandex_webmaster.module:416
+#: yandex_webmaster.module:397
 msgid "Verification by Yandex.Mail for domains."
 msgstr "Подтверждение прав через Яндекс.Почту для доменов."
 
-#: yandex_webmaster.module:418
+#: yandex_webmaster.module:399
 msgid "Text file in the site root directory."
 msgstr "Размещение текстового файла в корневом каталоге сайта."
 
-#: yandex_webmaster.module:420
+#: yandex_webmaster.module:401
 msgid "Verification by external Yandex.Mail for domains."
 msgstr "Внешнее подтверждение прав через Яндекс.Почту для доменов."
 
-#: yandex_webmaster.module:422
+#: yandex_webmaster.module:403
 msgid "Access rights was delegated from another user."
 msgstr "Права делегированы другим пользователям."
 
-#: yandex_webmaster.module:424
+#: yandex_webmaster.module:405
 msgid "Verification by information from the WHOIS service."
 msgstr "Сверка данных с информацией, предоставляемой сервисом WHOIS."
 
-#: yandex_webmaster.module:443
+#: yandex_webmaster.module:424
 msgid "HTTP Status: Multiple Choices (300)"
 msgstr "HTTP-статус: Множественный выбор (300)"
 
-#: yandex_webmaster.module:445
+#: yandex_webmaster.module:426
 msgid "HTTP Status: Moved Permanently (301)"
 msgstr "HTTP-статус: Ресурс перемещён навсегда (301)"
 
-#: yandex_webmaster.module:447
+#: yandex_webmaster.module:428
 msgid "HTTP Status: Found (Moved Temporarily) (302)"
 msgstr "HTTP-статус: Ресурс временно перемещён (302)"
 
-#: yandex_webmaster.module:449
+#: yandex_webmaster.module:430
 msgid "HTTP Status: See Other (303)"
 msgstr "HTTP-статус: Смотри другой ресурс (303)"
 
-#: yandex_webmaster.module:451
+#: yandex_webmaster.module:432
 msgid "HTTP Status: Not Modified (304)"
 msgstr "HTTP-статус: Ресурс не изменён (304)"
 
-#: yandex_webmaster.module:453
+#: yandex_webmaster.module:434
 msgid "HTTP Status: Use Proxy (305)"
 msgstr "HTTP-статус: Следует использовать прокси (305)"
 
-#: yandex_webmaster.module:455
+#: yandex_webmaster.module:436
 msgid "HTTP Status: Temporary Redirect (307)"
 msgstr "HTTP-статус: Временное перенаправление (307)"
 
-#: yandex_webmaster.module:458
+#: yandex_webmaster.module:439
 msgid "HTTP Status: Bad Request (400)"
 msgstr "HTTP-статус: Неверный запрос (400)"
 
-#: yandex_webmaster.module:460
+#: yandex_webmaster.module:441
 msgid "HTTP Status: Unauthorized (401)"
 msgstr "HTTP-статус: Неавторизованный запрос (401)"
 
-#: yandex_webmaster.module:462
+#: yandex_webmaster.module:443
 msgid "HTTP Status: Payment Required (402)"
 msgstr "HTTP-статус: Необходима оплата за запрос (402)"
 
-#: yandex_webmaster.module:464
+#: yandex_webmaster.module:445
 msgid "HTTP Status: Forbidden (403)"
 msgstr "HTTP-статус: Доступ к ресурсу запрещён (403)"
 
-#: yandex_webmaster.module:466
+#: yandex_webmaster.module:447
 msgid "HTTP Status: File Not Found (404)"
 msgstr "HTTP-статус: Ресурс не найден (404)"
 
-#: yandex_webmaster.module:468
+#: yandex_webmaster.module:449
 msgid "HTTP Status: Method Not Allowed (405)"
 msgstr "HTTP-статус: Метод неприменим (405)"
 
-#: yandex_webmaster.module:470
+#: yandex_webmaster.module:451
 msgid "HTTP Status: Not Acceptable (406)"
 msgstr "HTTP-статус: Недопустимый тип ресурса (406)"
 
-#: yandex_webmaster.module:472
+#: yandex_webmaster.module:453
 msgid "HTTP Status: Proxy Authentication Required (407)"
 msgstr "HTTP-статус: Требуется идентификация прокси, файервола (407)"
 
-#: yandex_webmaster.module:474
+#: yandex_webmaster.module:455
 msgid "HTTP Status: Request Timeout (408)"
 msgstr "HTTP-статус: Время запроса истекло (408)"
 
-#: yandex_webmaster.module:476
+#: yandex_webmaster.module:457
 msgid "HTTP Status: Conflict (409)"
 msgstr "HTTP-статус: Конфликт (409)"
 
-#: yandex_webmaster.module:478
+#: yandex_webmaster.module:459
 msgid "HTTP Status: Gone (410)"
 msgstr "HTTP-статус: Ресурс недоступен (410)"
 
-#: yandex_webmaster.module:480
+#: yandex_webmaster.module:461
 msgid "HTTP Status: Length Required  (411)"
 msgstr "HTTP-статус: Требуется длина (411)"
 
-#: yandex_webmaster.module:482
+#: yandex_webmaster.module:463
 msgid "HTTP Status: Precondition Failed (412)"
 msgstr "HTTP-статус: Сбой при обработке предварительного условия (412)"
 
-#: yandex_webmaster.module:484
+#: yandex_webmaster.module:465
 msgid "HTTP Status: Request Entity Too Large (413)"
 msgstr "HTTP-статус: Тело запроса превышает допустимый размер (413)"
 
-#: yandex_webmaster.module:486
+#: yandex_webmaster.module:467
 msgid "HTTP Status: Request-URL Too Long (414)"
 msgstr "HTTP-статус: Недопустимая длина URI запроса (414)"
 
-#: yandex_webmaster.module:488
+#: yandex_webmaster.module:469
 msgid "HTTP Status: Unsupported Media Type (415)"
 msgstr "HTTP-статус: Неподдерживаемый MIME тип (415)"
 
-#: yandex_webmaster.module:490
+#: yandex_webmaster.module:471
 msgid "HTTP Status: Requested Range Not Satisfiable (416)"
 msgstr "HTTP-статус: Диапазон не может быть обработан (416)"
 
-#: yandex_webmaster.module:492
+#: yandex_webmaster.module:473
 msgid "HTTP Status: Expectation Failed (417)"
 msgstr "HTTP-статус: Сбой при ожидании (417)"
 
-#: yandex_webmaster.module:494
+#: yandex_webmaster.module:475
 msgid "HTTP Status: Unprocessable Entity (422)"
 msgstr "HTTP-статус: Необрабатываемый элемент (422)"
 
-#: yandex_webmaster.module:496
+#: yandex_webmaster.module:477
 msgid "HTTP Status: Locked (423)"
 msgstr "HTTP-статус: Заблокировано (423)"
 
-#: yandex_webmaster.module:498
+#: yandex_webmaster.module:479
 msgid "HTTP Status: Failed Dependency (424)"
 msgstr "HTTP-статус: Неверная зависимость (424)"
 
-#: yandex_webmaster.module:500
+#: yandex_webmaster.module:481
 msgid "HTTP Status: Upgrade Required (426)"
 msgstr "HTTP-статус: Требуется обновление (426)"
 
-#: yandex_webmaster.module:503
+#: yandex_webmaster.module:484
 msgid "HTTP Status: Internal Server Error (500)"
 msgstr "HTTP-статус: Внутренняя ошибка сервера (500)"
 
-#: yandex_webmaster.module:505
+#: yandex_webmaster.module:486
 msgid "HTTP Status: Not Implemented (501)"
 msgstr "HTTP-статус: Метод не поддерживается (501)"
 
-#: yandex_webmaster.module:507
+#: yandex_webmaster.module:488
 msgid "HTTP Status: Bad Gateway (502)"
 msgstr "HTTP-статус: Ошибка межсетевого шлюза (502)"
 
-#: yandex_webmaster.module:509
+#: yandex_webmaster.module:490
 msgid "HTTP Status: Bad Gateway (503)"
 msgstr "HTTP-статус: Служба не доступна (503)"
 
-#: yandex_webmaster.module:511
+#: yandex_webmaster.module:492
 msgid "HTTP Status: Gateway Timeout (504)"
 msgstr "HTTP-статус: Время прохождения через межсетевой шлюз истекло (504)"
 
-#: yandex_webmaster.module:513
+#: yandex_webmaster.module:494
 msgid "HTTP Status: HTTP Version Not Supported (505)"
 msgstr "HTTP-статус: Версия НТТР не поддерживается (505)"
 
-#: yandex_webmaster.module:515
+#: yandex_webmaster.module:496
 msgid "HTTP Status: Insufficient Space to Store Resource (507)"
 msgstr "HTTP-статус: Недостаточно места (507)"
 
-#: yandex_webmaster.module:517
+#: yandex_webmaster.module:498
 msgid "HTTP Status: Not Extended (510)"
 msgstr "HTTP-статус: Отсутствуют расширения (510)"
 
-#: yandex_webmaster.module:520
+#: yandex_webmaster.module:501
 msgid "Connection was closed"
 msgstr "Обрыв соединения"
 
-#: yandex_webmaster.module:522
+#: yandex_webmaster.module:503
 msgid "Document is too large"
 msgstr "Слишком большой документ"
 
-#: yandex_webmaster.module:524
+#: yandex_webmaster.module:505
 msgid "Document was denied by robots.txt"
 msgstr "Документ запрещен в файле robots.txt"
 
-#: yandex_webmaster.module:526
+#: yandex_webmaster.module:507
 msgid "Document address does not correspond to the HTTP standard"
 msgstr "Адрес документа не соответствует стандарту HTTP"
 
-#: yandex_webmaster.module:528
+#: yandex_webmaster.module:509
 msgid "Unsupported document format"
 msgstr "Формат документа не поддерживается"
 
-#: yandex_webmaster.module:530
+#: yandex_webmaster.module:511
 msgid "DNS error"
 msgstr "Ошибка DNS"
 
-#: yandex_webmaster.module:532
+#: yandex_webmaster.module:513
 msgid "Status code does not correspond to standard HTTP"
 msgstr "Числовой код состояния не соответствует стандарту HTTP"
 
-#: yandex_webmaster.module:534
+#: yandex_webmaster.module:515
 msgid "Wrong HTTP header"
 msgstr "Неверный HTTP-заголовок"
 
-#: yandex_webmaster.module:536
+#: yandex_webmaster.module:517
 msgid "Unable to connect to the server"
 msgstr "Не удалось соединиться с веб-сервером"
 
-#: yandex_webmaster.module:538
+#: yandex_webmaster.module:519
 msgid "Wrong message length"
 msgstr "Неверная длина сообщения"
 
-#: yandex_webmaster.module:540;553
+#: yandex_webmaster.module:521;534
 msgid "Wrong encoding"
 msgstr "Неверная кодировка"
 
-#: yandex_webmaster.module:542
+#: yandex_webmaster.module:523
 msgid "Wrong number of data was submitted"
 msgstr "Передано неверное количество данных"
 
-#: yandex_webmaster.module:544
+#: yandex_webmaster.module:525
 msgid "HTTP header length exceeds the limit"
 msgstr "Длина http-заголовков превышает предел"
 
-#: yandex_webmaster.module:546
+#: yandex_webmaster.module:527
 msgid "Address length exceeds the limit"
 msgstr "Длина адреса превышает предел"
 
-#: yandex_webmaster.module:549
+#: yandex_webmaster.module:530
 msgid "Document contains meta-tag \"refresh\""
 msgstr "Документ содержит мета-тег \"refresh\""
 
-#: yandex_webmaster.module:551
+#: yandex_webmaster.module:532
 msgid "Document contains meta-tag \"noindex\""
 msgstr "Документ содержит мета-тег \"noindex\""
 
-#: yandex_webmaster.module:555
+#: yandex_webmaster.module:536
 msgid "This document is the server log"
 msgstr "Документ является логом сервера"
 
-#: yandex_webmaster.module:557
+#: yandex_webmaster.module:538
 msgid "Wrong document format"
 msgstr "Неверный формат документа"
 
-#: yandex_webmaster.module:559
+#: yandex_webmaster.module:540
 msgid "Unable to detect encoding"
 msgstr "Кодировка не распознана"
 
-#: yandex_webmaster.module:561
+#: yandex_webmaster.module:542
 msgid "Unsupported language"
 msgstr "Язык не поддерживается"
 
-#: yandex_webmaster.module:563
+#: yandex_webmaster.module:544
 msgid "Document doesn't contains text"
 msgstr "Документ не содержит текста"
 
-#: yandex_webmaster.module:565
+#: yandex_webmaster.module:546
 msgid "Too many links"
 msgstr "Слишком много ссылок"
 
-#: yandex_webmaster.module:567
+#: yandex_webmaster.module:548
 msgid "Error extracting"
 msgstr "Ошибка распаковывания"
 
-#: yandex_webmaster.module:569
+#: yandex_webmaster.module:550
 msgid "Empty server response"
 msgstr "Пустой ответ сервера"
 
-#: yandex_webmaster.module:571
+#: yandex_webmaster.module:552
 msgid "Document is not canonical"
 msgstr "Документ не является каноническим"
 
-#: yandex_webmaster.module:573
+#: yandex_webmaster.module:554
 msgid "Error code #"
 msgstr "Код ошибки №"
 
-#: yandex_webmaster.module:586
+#: yandex_webmaster.module:567
 msgid "Access token for Yandex.Webmaster module has expired. To update access token you need to get new security code on !link."
 msgstr "Токен доступа для модуля Яндекс.Вебмастер истёк. Чтобы обновить его, нужно получить новый проверочный код на странице !link."
 
-#: yandex_webmaster.module:586;590;621;701
+#: yandex_webmaster.module:567;571;602;681
 msgid "Yandex.Webmaster configuration page"
 msgstr "Настройка сервиса Яндекс.Вебмастер"
 
-#: yandex_webmaster.module:590
+#: yandex_webmaster.module:571
 msgid "Access token for Yandex.Webmaster module will expire soon. To update access token you need to get new security code on !link."
 msgstr "Токен доступа для модуля Яндекс.Вебмастер скоро закончится. Чтобы обновить его, нужно получить новый проверочный код на странице !link."
 
-#: yandex_webmaster.module:615
+#: yandex_webmaster.module:596
 msgid "An error occurred while checking Yandex.API user ID. Returned user ID are not an integer value."
 msgstr "Произошла ошибка при проверке идентификатора пользователя Яндекс. Идентификатор должен быть целым числом."
 
-#: yandex_webmaster.module:621
+#: yandex_webmaster.module:602
 msgid "An error occurred while checking Yandex.API user ID for given access token. Your access token may be expired. To update access token you need to get new security code on !link."
 msgstr "Произошла ошибка при проверке идентификатора пользователя Яндекс для заданного токена доступа. Возможно истёк его срок. Чтобы обновить токен доступа, нужно получить новый код подтверждения на странице !link."
 
-#: yandex_webmaster.module:692;767
+#: yandex_webmaster.module:672;747
 msgid "Never"
 msgstr "Никогда"
 
-#: yandex_webmaster.module:701
+#: yandex_webmaster.module:681
 msgid "An error occurred while receiving Yandex.Webmaster hosts list. Your access token may be expired. To update access token you need to get new security code on !link."
 msgstr "Произошла ошибка при получении списка сайтов от сервиса Яндекс.Вебмастер. Возможно истёк срок токена доступа. Чтобы его обновить, нужно получить новый код подтверждения на странице !link."
 
-#: yandex_webmaster.module:741;799
+#: yandex_webmaster.module:721;779
 msgid "Yandex.API UIN is undefined."
 msgstr "Идентификатор UIN для Яндекса не известен."
 
-#: yandex_webmaster.module:747;805
+#: yandex_webmaster.module:727;785
 msgid "Basic host was not selected."
 msgstr "Не указан сайт, выбранный по умолчанию."
 
-#: yandex_webmaster.module:871;882
+#: yandex_webmaster.module:851;862
 msgid "No"
 msgstr "Нет"
 
-#: yandex_webmaster.module:871;882
+#: yandex_webmaster.module:851;862
 msgid "Yes"
 msgstr "Да"
 
@@ -819,3 +831,29 @@ msgstr "Выберите \"OK\", чтобы получить код подтве
 msgid "Copy verification code, paste code to your site and save settings."
 msgstr "Скопируйте код подтверждения и сохраните настройки."
 
+#~ msgid "Security code was already set. If you need to get new code, !link."
+#~ msgstr ""
+#~ "Код подтверждения уже был установлен. Если вы хотите обновить его, !link."
+
+#~ msgid ""
+#~ "Yandex.Webmaster module requires security code to work. !link, to get "
+#~ "code."
+#~ msgstr ""
+#~ "Для работы модуля Яндекс.Вебмастер требуется установить код "
+#~ "подтверждения. !link, чтобы получить код."
+
+#~ msgid "Click here"
+#~ msgstr "Нажмите здесь"
+
+#~ msgid ""
+#~ "Current site (@site) is not in your host list. To add your site to Yandex."
+#~ "Webmaster service, !link."
+#~ msgstr ""
+#~ "Текущий сайт (@site) отсутствует в вашем списке. Чтобы добавить сайт в "
+#~ "сервис Яндекс.Вебмастер, !link."
+
+#~ msgid "Host list"
+#~ msgstr "Список сайтов"
+
+#~ msgid "Set as default"
+#~ msgstr "Установить по умолчанию"

@@ -109,34 +109,6 @@ function yandex_webmaster_permission() {
 }
 
 /**
- * Implements hook_theme().
- */
-function yandex_webmaster_theme() {
-  return array(
-    // Hosts table.
-    'yandex_webmaster_hosts_table' => array(
-      'render element' => 'form',
-      'file' => 'yandex_webmaster.theme.inc',
-    ),
-    // Top table.
-    'yandex_webmaster_top_table' => array(
-      'render element' => 'form',
-      'file' => 'yandex_webmaster.theme.inc',
-    ),
-    // Excluded table.
-    'yandex_webmaster_excluded_table' => array(
-      'render element' => 'form',
-      'file' => 'yandex_webmaster.theme.inc',
-    ),
-    // One column table.
-    'yandex_webmaster_list_table' => array(
-      'render element' => 'form',
-      'file' => 'yandex_webmaster.theme.inc',
-    ),
-  );
-}
-
-/**
  * Implements hook_cron().
  */
 function yandex_webmaster_cron() {
@@ -146,13 +118,15 @@ function yandex_webmaster_cron() {
   $hosts = yandex_webmaster_get_hosts();
   foreach ($hosts as $item) {
     if ($item['url-count'] > 0 && $item['virused'] != 'false') {
-      drupal_set_message(t('Danger! Site is virused!') . ' ' . $item['name'], 'error');
+      drupal_set_message(t('Danger! Site "@site" is virused!', array('@site' => $item['name'])), 'error');
     }
   }
 }
 
 /**
  * Implements hook_preprocess_html().
+ *
+ * Add Yandex verification meta tag.
  */
 function yandex_webmaster_preprocess_html(&$elements) {
   if (drupal_is_front_page() && variable_get('yandex_webmaster_verification_type', '') == 'META_TAG') {
@@ -649,7 +623,6 @@ function yandex_webmaster_get_host_uin($host_id) {
     'headers' => array('Authorization' => 'OAuth ' . variable_get('yandex_webmaster_token', '')),
   );
   $result = drupal_http_request(yandex_webmaster_domain_name() . 'api/' . $uid . '/hosts/' . $host_id . '/verify', $options);
-  print_r($result);
   if ($result->code == 200) {
     preg_match("/<uin>(.*?)<\/uin>/", $result->data, $matches);
     if (isset($matches[1]) && $matches[1] != '') {
@@ -749,7 +722,7 @@ function yandex_webmaster_get_host_stats($host_id = 0) {
     return $stats;
   }
   if ($host_id == 0) {
-    $host_id = variable_get('yandex_webmaster_basic_host_id', 0);
+    $host_id = (int) variable_get('yandex_webmaster_basic_host_id', 0);
     if ($host_id == 0) {
       $stats['error'] = t('Basic host was not selected.');
       return $stats;
@@ -807,7 +780,7 @@ function yandex_webmaster_get_query($query, $host_id = 0) {
     return $stats;
   }
   if ($host_id == 0) {
-    $host_id = variable_get('yandex_webmaster_basic_host_id', 0);
+    $host_id = (int) variable_get('yandex_webmaster_basic_host_id', 0);
     if ($host_id == 0) {
       $stats['error'] = t('Basic host was not selected.');
       return $stats;

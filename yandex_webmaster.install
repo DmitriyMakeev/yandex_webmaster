@@ -24,7 +24,6 @@ function yandex_webmaster_uninstall() {
   variable_del('yandex_webmaster_token_expiration');
   variable_del('yandex_webmaster_uid');
   variable_del('yandex_webmaster_uin');
-  variable_del('yandex_webmaster_use_metatag');
   variable_del('yandex_webmaster_verification_type');
   cache_clear_all('variables', 'cache');
 }

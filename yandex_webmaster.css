@@ -49,6 +49,10 @@
   font-size: 80%;
   opacity: 0.7;
 }
+.yandex_webmaster_last_access span {
+  font-size: 80%;
+  opacity: 0.7;
+}
 
 #yandex-webmaster-config-form .edit-manual-verification-message {
   color: #900;
