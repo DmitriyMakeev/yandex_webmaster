@@ -13,12 +13,8 @@
   text-indent: -9999px;
   width: 36px;
 }
-.yandex_webmaster_chart {
-  background: url("images/chart.png") no-repeat 0 center;
-  padding-right: 10px;
-}
-.yandex_webmaster_remove {
-  background: url("images/remove.png") no-repeat 0 center;
+.yandex_webmaster_actions {
+  display: block;
 }
 .yandex_webmaster_host_state {
   display: inline-block;
@@ -64,6 +60,12 @@
   font-size: 130%;
 }
 
+.form-item-selector-options,
+.form-item-selector-save {
+  display: inline;
+  padding-right: 20px!important;
+}
+
 /* Block styles */
 .yandex-webmaster-stats .virused-site {
   color: #900;
@@ -83,6 +85,8 @@
   right: 0;
 }
 
+#chart-statistics_chart { display: block; margin: 0 auto; }
+
 /* Table sort */
 table.sortable th {
   background-image: url("images/sort.png")!important;
@@ -99,11 +103,11 @@ table.sortable th.sorted {
 /* Modal window sttyle */
 #yandex-webmaster-modal {
   background-color: #FFF;
-  height: 514px;
+  height: 574px;
   margin-left:-220px;
   margin-top: -300px;
   padding: 4px 20px;
-  width: 500px;
+  width: 520px;
 }
 #yandex-webmaster-modal ol {
   font-size: 90%;

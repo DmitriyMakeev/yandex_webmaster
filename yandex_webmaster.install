@@ -27,3 +27,70 @@ function yandex_webmaster_uninstall() {
   variable_del('yandex_webmaster_verification_type');
   cache_clear_all('variables', 'cache');
 }
+
+/**
+ * Implements hook_schema().
+ */
+function yandex_webmaster_schema() {
+  $schema['yandex_webmaster_stats'] = array(
+    'description' => 'Statistics for Yandex.Webmaster module.',
+    'fields' => array(
+      'aid' => array(
+        'description' => 'Item id statistics.',
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'host_id' => array(
+        'description' => 'Yandex.Webmaster host id.',
+        'type' => 'varchar',
+        'length' => 16,
+        'not null' => TRUE,
+      ),
+      'tcy' => array(
+        'description' => 'Yandex TCY value.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'url_count' => array(
+        'description' => 'URL count.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'url_errors' => array(
+        'description' => 'URL errors count.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'index_count' => array(
+        'description' => 'Indexed pages count.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'links_count' => array(
+        'description' => 'External links count.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'timestamp' => array(
+        'description' => 'Last index timestamp.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+    ),
+    'primary key' => array('aid'),
+  );
+
+  return $schema;
+}

@@ -13,333 +13,6 @@
 require_once('idna_convert.class.php');
 
 /**
- * Return Yandex branding form element.
- *
- * @param $show_agreements_link
- *   Boolean value to show agreements link.
- *
- * @return array
- *   Form element.
- */
-function yandex_webmaster_branding_item($show_agreements_link = FALSE) {
-  global $language;
-  $agreements = $show_agreements_link ? '<br/>' . l(t('Read user agreements'), 'http://legal.yandex.ru/webmaster_api/', array('attributes' => array('target' => '_blank'))) : '';
-  return array(
-    '#type' => 'item',
-    '#weight' => $show_agreements_link ? 0 : 100,
-    '#markup' => '<div class="branding branding-' . $language->language . '">'
-      . t('Data provided by !link service.', array('!link' => l(t('Yandex.Webmaster'), yandex_webmaster_domain_name(), array(
-        'attributes' => array(
-          'target' => '_blank',
-          'title' => t('Yandex.Webmaster'),
-        ),
-        ))))
-      . $agreements
-      . '</div>',
-  );
-}
-
-/**
- * Display top clicks and shows report for the Yandex.Webmaster module.
- *
- * @ingroup yandex_webmaster
- */
-function yandex_webmaster_report_form($form, $form_state) {
-  drupal_set_title(t('Yandex.Webmaster top queries'));
-  drupal_add_css(drupal_get_path('module', 'yandex_webmaster') . '/yandex_webmaster.css');
-  drupal_add_js(drupal_get_path('module', 'yandex_webmaster') . '/yandex_webmaster.js');
-  $form = array();
-  // Get statistics.
-  $stats = yandex_webmaster_get_top_clicks();
-  if (isset($stats['error'])) {
-    drupal_set_message(t('An error occured while getting clicks statistics. @error', array('@error' => filter_xss($stats['error']))), 'error');
-    return $form;
-  }
-  $form['branding'] = yandex_webmaster_branding_item();
-
-  // Empty statistics.
-  if ($stats['total-clicks-count'] == 0) {
-    $form['summary'] = array(
-      '#type' => 'item',
-      '#markup' => t('Summary click count for last seven days') . ': '
-      . $stats['total-clicks-count'] . '<br />'
-      . t('Summary shows count for last seven days') . ': '
-      . $stats['total-shows-count'],
-    );
-    return $form;
-  }
-
-  $form['procent'] = array(
-    '#type' => 'item',
-    '#markup' => t('Percentage of shows count to the number of clicks') . ': ' . $stats['shows-clicks-procent'] . '%',
-  );
-
-  // Display top clicks list.
-  $form['clicks_summary'] = array(
-    '#type' => 'item',
-    '#markup' => t('Click count for last seven days') . ': '
-      . $stats['total-clicks-count'] . '<br />'
-      . t('Procent of popular query clicks') . ': '
-      . $stats['top-clicks-percent'] . '%',
-  );
-  $form['clicks'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Top clicks for last seven days'),
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-  $clicks = array();
-  foreach ($stats['clicks'] as $info) {
-    $clicks[] = array(
-      $info['clicks-top-rank'],
-      $info['query'],
-      $info['count'],
-      $info['position'],
-      $info['is-custom'],
-    );
-  }
-  $form['clicks']['table'] = array(
-    '#type' => 'markup',
-    '#markup' => theme('table', array(
-      'header' => array(
-        '#',
-        t('Query'),
-        t('Click count'),
-        t('Position'),
-        t('User query'),
-      ),
-      'rows' => $clicks,
-    ))
-  );
-
-  // Display top shows list.
-  $form['shows_summary'] = array(
-    '#type' => 'item',
-    '#markup' => t('Shows count for last seven days') . ': '
-      . $stats['total-shows-count'] . '<br />'
-      . t('Procent of popular query shows') . ': '
-      . $stats['top-shows-percent'] . '%',
-  );
-  $form['shows'] = array(
-    '#type' => 'fieldset',
-    '#title' => t('Top shows for last seven days'),
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-  );
-  $shows = array();
-  foreach ($stats['shows'] as $info) {
-    $shows[] = array(
-      $info['shows-top-rank'],
-      $info['query'],
-      $info['count'],
-      $info['position'],
-      $info['is-custom'],
-    );
-  }
-  $form['shows']['table'] = array(
-    '#type' => 'markup',
-    '#markup' => theme('table', array(
-      'header' => array(
-        '#',
-        t('Query'),
-        t('Shows count'),
-        t('Position'),
-        t('User query'),
-      ),
-      'rows' => $shows,
-    ))
-  );
-  return $form;
-}
-
-/**
- * Display last indexed pages report for the Yandex.Webmaster module.
- *
- * @ingroup yandex_webmaster
- */
-function yandex_webmaster_report_last_form($form, $form_state) {
-  drupal_set_title(t('Yandex.Webmaster last indexed pages'));
-  drupal_add_css(drupal_get_path('module', 'yandex_webmaster') . '/yandex_webmaster.css');
-  $form = array();
-  // Get statistics.
-  $stats = yandex_webmaster_get_last_index();
-  if (isset($stats['error'])) {
-    drupal_set_message(t('An error occured while getting last indexed pages statistics. @error', array('@error' => filter_xss($stats['error']))), 'error');
-    return $form;
-  }
-  $form['branding'] = yandex_webmaster_branding_item();
-
-  $host = variable_get('yandex_webmaster_basic_host_id', 0);
-  $form['index_summary'] = array(
-    '#type' => 'item',
-    '#markup' => t('Summary count of indexed pages') . ': '
-      . $stats['index-count']
-      . '<br />'
-      . t('Indexed pages for last seven days') . ': '
-      . count($stats['url']),
-  );
-  $form['view_all'] = array(
-    '#type' => 'item',
-    '#markup' => l(t('View all indexed pages'), yandex_webmaster_domain_name() . 'site/indexed-pages.xml?host=' . $host . '&path=*', array(
-      'attributes' => array(
-        'target' => '_blank',
-        'title' => t('Open in new window'),
-      ),
-    )),
-  );
-
-  // Display last indexed pages table.
-  if (count($stats['url'])) {
-    $list = array();
-    $counter = 0;
-    foreach ($stats['url'] as $url) {
-      ++$counter;
-      $list[] = array(
-        $counter,
-        urldecode($url),
-      );
-    }
-    $form['table'] = array(
-      '#title' => t('Indexed pages for last seven days'),
-      '#type' => 'markup',
-      '#markup' => theme('table', array(
-        'header' => array(
-          '#',
-          t('Address'),
-        ),
-        'rows' => $list,
-      ))
-    );
-  }
-
-  return $form;
-}
-
-/**
- * Display excluded from the index pages report for the Yandex.Webmaster module.
- *
- * @ingroup yandex_webmaster
- */
-function yandex_webmaster_report_excluded_form($form, $form_state) {
-  drupal_set_title(t('Yandex.Webmaster excluded pages'));
-  drupal_add_css(drupal_get_path('module', 'yandex_webmaster') . '/yandex_webmaster.css');
-  drupal_add_js(drupal_get_path('module', 'yandex_webmaster') . '/yandex_webmaster.js');
-  $form = array();
-  // Get statistics.
-  $stats = yandex_webmaster_get_excluded_pages();
-  if (isset($stats['error'])) {
-    drupal_set_message(t('An error occured while getting excluded pages statistics. @error', array('@error' => filter_xss($stats['error']))), 'error');
-    return $form;
-  }
-  $form['branding'] = yandex_webmaster_branding_item();
-
-  $form['excluded_summary'] = array(
-    '#type' => 'item',
-    '#markup' => t('Summary count of excluded pages') . ': ' . $stats['url-errors'],
-  );
-
-  // Display excluded pages table.
-  if (count($stats['url'])) {
-    $list = array();
-    $host = (int) variable_get('yandex_webmaster_basic_host_id', 0);
-    foreach ($stats['url'] as $info) {
-      $list[] = array(
-        'data' => array(
-          $info['severity'],
-          yandex_webmaster_code_description($info['code']),
-          $info['count'],
-          l(t('View'), yandex_webmaster_domain_name() . 'site/errors/types.xml?host=' . $host . '&code=' . $info['code'], array(
-            'attributes' => array(
-              'target' => '_blank',
-              'title' => t('Open in new window'),
-            ),
-          )),
-        ),
-        'class' => array(drupal_strtolower($info['severity'])),
-      );
-    }
-    $form['table'] = array(
-      '#title' => t('External links for last seven days'),
-      '#type' => 'markup',
-      '#markup' => theme('table', array(
-        'header' => array(
-          t('Severity'),
-          t('Error type'),
-          t('Count'),
-          t('Actions'),
-        ),
-        'rows' => $list,
-      ))
-    );
-  }
-
-  return $form;
-}
-
-/**
- * Display external links report for the Yandex.Webmaster module.
- *
- * @ingroup yandex_webmaster
- */
-function yandex_webmaster_report_links_form($form, $form_state) {
-  drupal_set_title(t('Yandex.Webmaster external links'));
-  drupal_add_css(drupal_get_path('module', 'yandex_webmaster') . '/yandex_webmaster.css');
-  $form = array();
-  // Get statistics.
-  $stats = yandex_webmaster_get_external_links();
-  if (isset($stats['error'])) {
-    drupal_set_message(t('An error occured while getting external links statistics. @error', array('@error' => filter_xss($stats['error']))), 'error');
-    return $form;
-  }
-  $form['branding'] = yandex_webmaster_branding_item();
-
-  $host = variable_get('yandex_webmaster_basic_host_id', 0);
-  $form['index_summary'] = array(
-    '#type' => 'item',
-    '#markup' => t('Summary count of external links') . ': '
-      . $stats['links-count']
-      . '<br />'
-      . t('External links for last seven days') . ': '
-      . count($stats['url']),
-  );
-  $form['view_all'] = array(
-    '#type' => 'item',
-    '#markup' => l(t('View all external links'), 'http://webmaster.yandex.com/site/indexed/links.xml?host=' . $host . '&path=*', array(
-      'attributes' => array(
-        'target' => '_blank',
-        'title' => t('Open in new window'),
-      ),
-    )),
-  );
-
-  // Display last indexed pages table.
-  if (count($stats['url'])) {
-    $list = array();
-    $counter = 0;
-    foreach ($stats['url'] as $url) {
-      ++$counter;
-      $list[] = array(
-        $counter,
-        urldecode($url),
-      );
-    }
-    $form['table'] = array(
-      '#title' => t('External links for last seven days'),
-      '#type' => 'markup',
-      '#markup' => theme('table', array(
-        'header' => array(
-          '#',
-          t('Address'),
-        ),
-        'rows' => $list,
-      ))
-    );
-  }
-
-  return $form;
-}
-
-/**
  * Display configuration page for the Yandex.Webmaster module.
  *
  * @ingroup yandex_webmaster
@@ -357,6 +30,7 @@ function yandex_webmaster_config_form($form, $form_state) {
 
   // Parse host list.
   $hostlist = yandex_webmaster_get_hosts();
+  yandex_webmaster_update_stats($hostlist);
   // Check for current host.
   $idna = new idna_convert();
   $current_host = $idna->decode($_SERVER['HTTP_HOST']);
@@ -470,20 +144,20 @@ function yandex_webmaster_config_form($form, $form_state) {
   $is_full_list = variable_get('yandex_webmaster_full_list', TRUE);
   foreach ($hostlist as $host_id => $host) {
     $actions = '';
-    if ($host_id == $basic_host) {
-      if ($host['url-count'] > 0) {
-        $actions .= l(t('Open statistics'), 'admin/reports/yandex_webmaster', array(
-          'attributes' => array(
-            'class' => 'yandex_webmaster_chart',
-            'title' => t('Open statistics'),
-          ),
-        ));
-      }
+    if ($host['url-count'] > 0) {
+      $actions .= l(t('Open statistics'), 'admin/reports/yandex_webmaster/' . $host_id, array(
+        'attributes' => array(
+          /* 'class' => 'yandex_webmaster_chart', */
+          'class' => 'yandex_webmaster_actions',
+          'title' => t('Open statistics'),
+        ),
+      ));
     }
     if ($host_id == $current_host_id) {
       $actions .= l(t('Remove site'), 'admin/config/yandex_webmaster/remove', array(
         'attributes' => array(
-          'class' => 'yandex_webmaster_remove',
+          /* 'class' => 'yandex_webmaster_remove', */
+          'class' => 'yandex_webmaster_actions',
           'title' => t('Remove site'),
         ),
       ));
@@ -500,11 +174,12 @@ function yandex_webmaster_config_form($form, $form_state) {
     $state = $host['verification'];
     $virused = $host['virused'] == 'false' ? '' : ' VIRUSED';
 
+    $status = yandex_webmaster_state_description($state, 'verification') . ' ' . yandex_webmaster_state_description($host['crawling'], 'index');
     $options[$host_id] = array(
       '#attributes' => array(
         'class' => array('yandex_webmaster_host_row' . $virused),
       ),
-      'hostname' => '<div class="yandex_webmaster_host_state ' . $state . $virused . '">'
+      'hostname' => '<div class="yandex_webmaster_host_state ' . $state . $virused . '" title="' . $status . '">'
         . '<div class="yandex_webmaster_hostname">' . $hostname
         . l($hostname, $url, array(
           'attributes' => array(
@@ -515,8 +190,7 @@ function yandex_webmaster_config_form($form, $form_state) {
         ))
         . '<br />'
         . '<span>'
-        . yandex_webmaster_state_description($state, 'verification') . ' '
-        . yandex_webmaster_state_description($host['crawling'], 'index')
+        . $status
         . '</span> '
         . '</div>',
       'tcy' => $host['tcy'],
@@ -531,7 +205,7 @@ function yandex_webmaster_config_form($form, $form_state) {
   // Add current host to list, if it has not been added.
   if ($current_host_id == -1) {
     $options[$current_host] = array(
-      'hostname' => '<div class="yandex_webmaster_host_state WAITING">'
+      'hostname' => '<div class="yandex_webmaster_host_state WAITING" title="' . t('Not in your host list. Need to be added.') . '">'
         . '<div class="yandex_webmaster_hostname">' . $current_host . '<br />'
         . '<span>' . t('Not in your host list. Need to be added.') . '</span> '
         . '</div>',
@@ -608,6 +282,10 @@ function yandex_webmaster_config_form_validate($form, &$form_state) {
       drupal_set_message(t('Access request return error: @error. Try to get a new security code.', array('@error' => $result->code . ' (' . $error . ')')), 'error');
     }
   }
+  // Rebuild menu when default site was changed.
+  if (isset($form_state['values']['yandex_webmaster_basic_host_id']) && $form_state['values']['yandex_webmaster_basic_host_id'] != variable_get('yandex_webmaster_basic_host_id', '')) {
+    menu_rebuild();
+  }
 }
 
 /**
@@ -637,6 +315,7 @@ function yandex_webmaster_add_site_form($form, $form_state) {
 
   return $form;
 }
+
 /**
  * Validate yandex_webmaster_add_site_form form submissions.
  */
@@ -721,6 +400,7 @@ function yandex_webmaster_add_site_form_validate($form, &$form_state) {
     drupal_set_message(t('An error occurred while sending verification type to Yandex.Webmaster service.'), 'error');
   }
 
+  menu_rebuild();
   drupal_goto('admin/config/services/yandex_webmaster');
 }
 

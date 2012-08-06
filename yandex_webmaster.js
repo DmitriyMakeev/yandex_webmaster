@@ -21,7 +21,7 @@
 		attach : function() {
       $("input.modal").click(function() {
         modalWindow.windowId = "yandex-webmaster-modal";
-        modalWindow.content = '<iframe width="480" height="440" frameborder="0" scrolling="no" allowtransparency="false" src="' + $(this).attr('rel') + '"></iframe>';
+        modalWindow.content = '<iframe width="520" height="500" frameborder="0" scrolling="no" allowtransparency="false" src="' + $(this).attr('rel') + '"></iframe>';
         modalWindow.content += '<hr /><ol><li>';
         modalWindow.content += Drupal.t('Log in to your Yandex account.');
         modalWindow.content += '</li><li>';

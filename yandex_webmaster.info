@@ -6,5 +6,6 @@ configure = admin/config/services/yandex_webmaster
 
 files[] = yandex_webmaster.install
 files[] = yandex_webmaster.module
-files[] = yandex_webmaster.admin.inc
-files[] = yandex_webmaster.theme.inc
+files[] = includes/yandex_webmaster.inc
+files[] = includes/yandex_webmaster.admin.inc
+files[] = includes/yandex_webmaster.report.inc
